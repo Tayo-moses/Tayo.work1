@@ -1,10 +1,10 @@
-import { defineCollection, defineConfig } from '@content-collections/core'
-import { z } from 'zod'
+import { defineCollection, defineConfig } from "@content-collections/core";
+import { z } from "zod";
 
 const jobs = defineCollection({
-  name: 'jobs',
-  directory: 'content/jobs',
-  include: '**/*.md',
+  name: "jobs",
+  directory: "content/jobs",
+  include: "**/*.md",
   schema: z.object({
     jobTitle: z.string(),
     summary: z.string(),
@@ -15,12 +15,12 @@ const jobs = defineCollection({
     tags: z.array(z.string()),
     content: z.string(),
   }),
-})
+});
 
 const education = defineCollection({
-  name: 'education',
-  directory: 'content/education',
-  include: '**/*.md',
+  name: "education",
+  directory: "content/education",
+  include: "**/*.md",
   schema: z.object({
     school: z.string(),
     summary: z.string(),
@@ -29,12 +29,12 @@ const education = defineCollection({
     tags: z.array(z.string()),
     content: z.string(),
   }),
-})
+});
 
 const blog = defineCollection({
-  name: 'blog',
-  directory: 'content/blog',
-  include: '**/*.md',
+  name: "blog",
+  directory: "content/blog",
+  include: "**/*.md",
   schema: z.object({
     title: z.string(),
     date: z.string(),
@@ -43,12 +43,12 @@ const blog = defineCollection({
     author: z.string(),
     content: z.string(),
   }),
-})
+});
 
 const projects = defineCollection({
-  name: 'projects',
-  directory: 'content/projects',
-  include: '**/*.md',
+  name: "projects",
+  directory: "content/projects",
+  include: "**/*.md",
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -58,8 +58,8 @@ const projects = defineCollection({
     image: z.string().optional(),
     content: z.string(),
   }),
-})
+});
 
 export default defineConfig({
-  collections: [jobs, education, blog, projects],
-})
+  content: [jobs, education, blog, projects],
+});

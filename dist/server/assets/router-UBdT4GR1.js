@@ -86,7 +86,7 @@ const media = [
 const socials = [
   { label: "Instagram", href: "https://www.instagram.com/tayoadebayo.m/" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/tayoadebayo/" },
-  { label: "Email", href: "mailto:hi@tayo.work" }
+  { label: "Email", href: "mailto:contact@tayo.work" }
 ];
 function Portfolio() {
   return /* @__PURE__ */ jsxs(
@@ -175,33 +175,26 @@ function Portfolio() {
                   children: "Product Designer"
                 }
               ),
-              /* @__PURE__ */ jsx(
-                "div",
+              /* @__PURE__ */ jsx("div", { className: "animate-in delay-3", style: { marginBottom: "56px" }, children: [
+                "I live in Lagos, Nigeria.",
+                "I founded Firstangle, a design agency company. We worked on a couple of brand identity projects for company in Nigeria, UK and the US. But, we are pivoting to industrial design agency.",
+                "I currently work at Rivy, where I lead design for product like Energystack and Rivy, leading the adoption of clean energy and making energy, power accessible for Africans through financing.",
+                "I founded Leafmover, an AI-driven tool that helps small businesses sell their products and services online. We created Copicart, an ecommerce store for gadgets and everyday essentials.",
+                "At my core, I'm a designer who loves crafting products with a high level of polish."
+              ].map((para, i) => /* @__PURE__ */ jsx(
+                "p",
                 {
-                  className: "animate-in delay-3",
-                  style: { marginBottom: "56px" },
-                  children: [
-                    "I live in Lagos, Nigeria.",
-                    "I founded Firstangle, a design agency company. We worked on a couple of brand identity projects for company in Nigeria, UK and the US. But, we are pivoting to industrial design agency.",
-                    "I currently work at Rivy, where I lead design for product like Energystack and Rivy, leading the adoption of clean energy and making energy, power accessible for Africans through financing.",
-                    "I founded Leafmover, an AI-driven tool that helps small businesses sell their products and services online. We created Copicart, an ecommerce store for gadgets and everyday essentials.",
-                    "At my core, I'm a designer who loves crafting products with a high level of polish."
-                  ].map((para, i) => /* @__PURE__ */ jsx(
-                    "p",
-                    {
-                      style: {
-                        fontSize: "17px",
-                        lineHeight: 1.75,
-                        color: i === 0 ? "var(--ink-secondary)" : "var(--ink)",
-                        marginBottom: i < 4 ? "20px" : 0,
-                        fontWeight: 300
-                      },
-                      children: para
-                    },
-                    i
-                  ))
-                }
-              ),
+                  style: {
+                    fontSize: "17px",
+                    lineHeight: 1.75,
+                    color: i === 0 ? "var(--ink-secondary)" : "var(--ink)",
+                    marginBottom: i < 4 ? "20px" : 0,
+                    fontWeight: 300
+                  },
+                  children: para
+                },
+                i
+              )) }),
               /* @__PURE__ */ jsx(
                 "div",
                 {
@@ -374,7 +367,14 @@ function Portfolio() {
                             fill: "none",
                             stroke: "currentColor",
                             strokeWidth: "1.5",
-                            children: /* @__PURE__ */ jsx("path", { d: "M4 10h12M11 5l5 5-5 5", strokeLinecap: "round", strokeLinejoin: "round" })
+                            children: /* @__PURE__ */ jsx(
+                              "path",
+                              {
+                                d: "M4 10h12M11 5l5 5-5 5",
+                                strokeLinecap: "round",
+                                strokeLinejoin: "round"
+                              }
+                            )
                           }
                         )
                       }
@@ -489,7 +489,7 @@ function Portfolio() {
     }
   );
 }
-const $$splitComponentImporter = () => import("./_slug-dZ2Wvr8Z.js");
+const $$splitComponentImporter = () => import("./_slug-DuAtOfbj.js");
 const Route = createFileRoute("/blog/$slug")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });
